@@ -1,13 +1,12 @@
 <%- include("partials/header") %>
 <h1>Home</h1>
 <p><%= homeContent %></p>
-<ul>
 <% posts.forEach((post) => { %>
     <div class="container">
     <h1 class="display-4"><%= post.title %></h2>
-    <p class="lead"><%= post.body %></p>
+    <p class="lead hundreed-chars"><%= post.body %></p>
+    <a href="/post/<%= post.title %>">Read more</a>
     </div>
 <% }) %>
-</ul>
 <%- include("partials/footer") %>
 
